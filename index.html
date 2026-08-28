@@ -2344,11 +2344,28 @@
         hamburger.setAttribute("aria-expanded", isOpen);
         document.body.style.overflow = isOpen ? "hidden" : "";
       });
-      mobileMenu.querySelectorAll("a").forEach(a => {
-        a.addEventListener("click", () => {
-          mobileMenu.classList.remove("open");
-          hamburger.classList.remove("open");
-          document.body.style.overflow = "";
+
+      // Navegação suave precisa para menu mobile e links internos
+      document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId && targetId.length > 1) {
+            const target = document.querySelector(targetId);
+            if (target) {
+              e.preventDefault();
+              mobileMenu.classList.remove("open");
+              hamburger.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+              document.body.style.overflow = "";
+
+              const navHeight = navbar ? navbar.offsetHeight : 70;
+              const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+              });
+            }
+          }
         });
       });
 
