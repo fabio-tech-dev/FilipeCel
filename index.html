@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filipe Cell Celulares | Celulares em Martinho Campos e Região - MG</title>
+  <meta name="description"
+    content="Filipe Cell Celulares em Martinho Campos e Região - MG. Encontre celulares lacrados e seminovos, faça a troca do seu aparelho e conte com nossa assistência.">
+  <meta property="og:title" content="Filipe Cell Celulares | Martinho Campos e Região - MG">
+  <meta property="og:description"
+    content="Celulares lacrados e seminovos, troca de aparelho e assistência em Martinho Campos e Região - MG.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="apple-touch-icon" href="assets/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="LogoFilipeCell.jpg">
+  <style>
+    /* ==========================================================================
+   FILIPE CELL CELULARES — DESIGN TOKENS
+   Preto profundo + vermelho de sinal + branco + cinza técnico
+   Tipografia: Space Grotesk (display) / Inter (corpo) / JetBrains Mono (dados)
+   ========================================================================== */
+    :root {
+      --black-950: #08080a;
+      --black-900: #0c0c0f;
+      --black-850: #111114;
+      --black-800: #17171b;
+      --black-700: #202024;
+      --line: #26262b;
+      --red-500: #e8232b;
+      --red-600: #c81820;
+      --red-800: #7a0f14;
+      --red-glow: rgba(232, 35, 43, .35);
+      --white: #f5f5f7;
+      --gray-300: #b7b7bd;
+      --gray-500: #84848c;
+      --gray-700: #57575e;
+
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --container: 1240px;
+      --radius-s: 10px;
+      --radius-m: 16px;
+      --radius-l: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black-950);
+      color: var(--white);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--red-500);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--red-500);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red-500);
+      box-shadow: 0 0 10px var(--red-glow);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .35;
+      }
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-head {
+      max-width: 640px;
+      margin-bottom: 56px;
+    }
+
+    .section-head p.lead {
+      color: var(--gray-300);
+      font-size: 17px;
+      margin-top: 14px;
+    }
+
+    h2.h-title {
+      font-size: clamp(30px, 4vw, 44px);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 30px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 15px;
+      font-family: var(--font-body);
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--red-500), var(--red-800));
+      color: #fff;
+      box-shadow: 0 8px 24px -8px var(--red-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px -8px rgba(232, 35, 43, .5);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid var(--line);
+      color: var(--white);
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--gray-500);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    /* reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      * {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 18px 0;
+      transition: background .3s ease, padding .3s ease, border-color .3s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(8, 8, 10, .86);
+      backdrop-filter: blur(14px);
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 19px;
+      letter-spacing: -.01em;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px -4px var(--red-glow);
+    }
+
+    .logo-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo span {
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--gray-300);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 4px 0;
+      transition: color .2s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1.5px;
+      background: var(--red-500);
+      transition: width .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-cta .btn {
+      padding: 12px 22px;
+      font-size: 14px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      z-index: 210;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: transform .3s ease, opacity .3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: var(--black-950);
+      z-index: 195;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+      padding: 32px;
+      transform: translateY(-100%);
+      transition: transform .35s cubic-bezier(.65, 0, .35, 1);
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .mobile-menu .btn {
+      margin-top: 20px;
+      width: fit-content;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      padding: 168px 0 120px;
+      background:
+        radial-gradient(60% 50% at 78% 30%, rgba(232, 35, 43, .16), transparent 65%),
+        radial-gradient(40% 40% at 10% 85%, rgba(232, 35, 43, .08), transparent 70%),
+        var(--black-950);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(38px, 5.4vw, 64px);
+      line-height: 1.04;
+      margin-bottom: 22px;
+    }
+
+    .hero-copy h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--red-500), #ff6b6b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy .lead {
+      font-size: 18px;
+      color: var(--gray-300);
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .hero-trustline {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--gray-500);
+      letter-spacing: .02em;
+    }
+
+    .hero-trustline span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-trustline b {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .dot-sep {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--red-500);
+    }
+
+    /* phone composition */
+    .hero-visual {
+      position: relative;
+      height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone {
+      position: absolute;
+      border-radius: 38px;
+      background: linear-gradient(160deg, var(--black-700), var(--black-900));
+      border: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 40px 90px -30px rgba(0, 0, 0, .8), inset 0 0 0 1px rgba(255, 255, 255, .03);
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 26px;
+      background: linear-gradient(155deg, #1a1a1f 0%, #0a0a0c 60%);
+    }
+
+    .phone::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 34%;
+      height: 8px;
+      border-radius: 6px;
+      background: #000;
+    }
+
+    .phone-main {
+      width: 230px;
+      height: 470px;
+      z-index: 3;
+      animation: float-main 6s ease-in-out infinite;
+    }
+
+    .phone-main .screen-glow {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 26px;
+      overflow: hidden;
+    }
+
+    .phone-main .screen-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(200deg, rgba(232, 35, 43, .5), transparent 55%);
+    }
+
+    .phone-main .screen-status {
+      position: absolute;
+      top: 22px;
+      left: 28px;
+      right: 28px;
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 600;
+    }
+
+    .phone-main .signal {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 10px;
+    }
+
+    .phone-main .signal span {
+      width: 2.5px;
+      background: rgba(255, 255, 255, .8);
+      border-radius: 1px;
+    }
+
+    .phone-main .signal span:nth-child(1) {
+      height: 3px;
+    }
+
+    .phone-main .signal span:nth-child(2) {
+      height: 5px;
+    }
+
+    .phone-main .signal span:nth-child(3) {
+      height: 7px;
+    }
+
+    .phone-main .signal span:nth-child(4) {
+      height: 10px;
+    }
+
+    .phone-main .screen-clock {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, .6);
+    }
+
+    .phone-main .screen-center-brand {
+      position: absolute;
+      top: 168px;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .phone-main .screen-brand-logo {
+      width: 68px;
+      height: 68px;
+      border-radius: 20px;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 12px 30px -4px var(--red-glow), 0 0 0 1px rgba(255, 255, 255, .15);
+    }
+
+    .phone-main .screen-brand-name {
+      font-family: var(--font-display);
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .8);
+    }
+
+    .phone-main .screen-brand-name span {
+      color: var(--gray-300);
+      font-weight: 500;
+    }
+
+    .phone-main .screen-brand-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gray-300);
+      text-align: center;
+      max-width: 170px;
+      line-height: 1.4;
+      margin-top: 2px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .9);
+    }
+
+    .phone-left {
+      width: 180px;
+      height: 370px;
+      left: 2%;
+      top: 18%;
+      transform: rotate(-13deg);
+      opacity: .75;
+      z-index: 1;
+      animation: float-side 7s ease-in-out infinite;
+      filter: brightness(.75);
+    }
+
+    .phone-right {
+      width: 180px;
+      height: 370px;
+      right: 0%;
+      bottom: 6%;
+      transform: rotate(11deg);
+      opacity: .75;
+      z-index: 2;
+      animation: float-side 8s ease-in-out infinite reverse;
+      filter: brightness(.85);
+    }
+
+    @keyframes float-main {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-16px);
+      }
+    }
+
+    @keyframes float-side {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(var(--r, 0deg));
+      }
+    }
+
+    .phone-left {
+      --r: -13deg;
+    }
+
+    .phone-right {
+      --r: 11deg;
+    }
+
+    .hero-particle {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--red-500);
+      box-shadow: 0 0 14px 3px var(--red-glow);
+      opacity: .6;
+      animation: particle-float 5s ease-in-out infinite;
+    }
+
+    @keyframes particle-float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-22px);
+      }
+    }
+
+    /* ================= TRUST BAR ================= */
+    .trustbar {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--black-900);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 34px 26px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      background: rgba(232, 35, 43, .1);
+      border: 1px solid rgba(232, 35, 43, .25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--red-500);
+    }
+
+    .trust-item h3 {
+      font-family: var(--font-body);
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .trust-item p {
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    /* ================= PRODUCTS ================= */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: linear-gradient(180deg, var(--black-850), var(--black-900));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-m);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(232, 35, 43, .4);
+      box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
+    }
+
+    .product-card .status {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: .06em;
+      padding: 5px 10px;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+
+    .status.lacrado {
+      background: rgba(232, 35, 43, .14);
+      color: var(--red-500);
+      border: 1px solid rgba(232, 35, 43, .3);
+    }
+
+    .status.seminovo {
+      background: rgba(255, 255, 255, .06);
+      color: var(--gray-300);
+      border: 1px solid var(--line);
+    }
+
+    .product-thumb {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      border-radius: var(--radius-s);
+      overflow: hidden;
+    }
+
+    .product-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+    }
+
+    .product-thumb img.img-iphone {
+      object-fit: cover;
+      object-position: center 68%;
+    }
+
+    .product-card:hover .product-thumb img {
+      transform: scale(1.06);
+    }
+
+    .product-card h3 {
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .product-card .cat {
+      font-size: 13px;
+      color: var(--gray-500);
+      margin-bottom: 20px;
+    }
+
+    .product-card .btn {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 13.5px;
+    }
+
+    .products-note {
+      margin-top: 36px;
+      padding: 18px 22px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-s);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--gray-500);
+      text-align: center;
+    }
+
+    /* ================= TRADE-IN ================= */
+    .tradein {
+      background:
+        radial-gradient(70% 60% at 50% 0%, rgba(232, 35, 43, .18), transparent 70%),
+        var(--black-900);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .tradein .section-head {
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 56px 0 44px;
+      flex-wrap: wrap;
+    }
+
+    .flow-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 180px;
+    }
+
+    .flow-circle {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: var(--black-850);
+    }
+
+    .flow-circle svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--gray-300);
+    }
+
+    .flow-step.highlight .flow-circle {
+      border-color: var(--red-500);
+      background: linear-gradient(160deg, rgba(232, 35, 43, .22), rgba(232, 35, 43, .04));
+      box-shadow: 0 0 30px -6px var(--red-glow);
+    }
+
+    .flow-step.highlight svg {
+      stroke: var(--red-500);
+    }
+
+    .flow-step p {
+      font-size: 13.5px;
+      color: var(--gray-300);
+      font-weight: 500;
+    }
+
+    .flow-arrow {
+      width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-700);
+    }
+
+    .flow-arrow svg {
+      width: 34px;
+    }
+
+    /* ================= SERVICES ================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-m);
+      background: var(--black-850);
+      transition: border-color .3s ease, transform .3s ease;
+    }
+
+    .service-card:hover {
+      border-color: rgba(232, 35, 43, .35);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      margin-bottom: 22px;
+      background: rgba(232, 35, 43, .1);
+      border: 1px solid rgba(232, 35, 43, .25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--red-500);
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--gray-500);
+      font-size: 14.5px;
+    }
+
+    /* ================= ABOUT ================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-copy .lead {
+      color: var(--gray-300);
+      font-size: 17px;
+      margin: 20px 0 28px;
+      max-width: 460px;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 36px;
+    }
+
+    .about-stats div {
+      border-left: 2px solid var(--red-500);
+      padding-left: 14px;
+    }
+
+    .about-stats b {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 15px;
+      color: var(--white);
+    }
+
+    .about-stats span {
+      font-size: 12.5px;
+      color: var(--gray-500);
+    }
+
+    .about-visual {
+      position: relative;
+      border-radius: var(--radius-l);
+      overflow: hidden;
+      height: 400px;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: flex-end;
+      padding: 32px;
+    }
+
+    .about-visual .about-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      transition: transform .5s ease;
+    }
+
+    .about-visual:hover .about-bg {
+      transform: scale(1.03);
+    }
+
+    .about-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 10, .88) 0%, rgba(8, 8, 10, .3) 50%, rgba(8, 8, 10, .6) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .about-visual .tag,
+    .about-visual .store-row {
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-visual .tag {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--gray-300);
+      border: 1px solid var(--line);
+      padding: 8px 14px;
+      border-radius: 100px;
+      background: rgba(0, 0, 0, .5);
+      backdrop-filter: blur(8px);
+    }
+
+    .about-visual .store-row {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      right: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about-visual .store-row .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red-500);
+      box-shadow: 0 0 10px var(--red-glow);
+    }
+
+    /* ================= INSTAGRAM ================= */
+    .instagram {
+      background: var(--black-900);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .insta-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 44px;
+    }
+
+    .insta-handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--white);
+      margin-top: 10px;
+    }
+
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .insta-cell {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-s);
+      position: relative;
+      overflow: hidden;
+      background: var(--black-900);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .insta-cell:hover {
+      transform: scale(1.04);
+      border-color: rgba(232, 35, 43, .5);
+      box-shadow: 0 12px 30px -8px rgba(232, 35, 43, .3);
+    }
+
+    .insta-cell video.insta-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      transition: transform .4s ease;
+    }
+
+    .insta-cell:hover video.insta-video {
+      transform: scale(1.08);
+    }
+
+    .insta-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: rgba(8, 8, 10, .35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .3s ease;
+    }
+
+    .insta-cell:hover .insta-overlay {
+      background: rgba(8, 8, 10, .15);
+    }
+
+    .insta-overlay svg {
+      width: 32px;
+      height: 32px;
+      stroke: #fff;
+      fill: rgba(255, 255, 255, .2);
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, .6));
+      transition: transform .3s ease, fill .3s ease, stroke .3s ease;
+    }
+
+    .insta-cell:hover .insta-overlay svg {
+      transform: scale(1.15);
+      fill: var(--red-500);
+      stroke: var(--red-500);
+    }
+
+    /* ================= TESTIMONIALS ================= */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .testi-card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-m);
+      background: var(--black-850);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testi-stars {
+      color: var(--red-500);
+      font-size: 15px;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    .testi-card p.quote {
+      color: var(--gray-300);
+      font-size: 14.5px;
+      margin-bottom: 24px;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .testi-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, var(--black-700), var(--black-900));
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--red-500);
+      flex-shrink: 0;
+    }
+
+    .testi-person {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .testi-person b {
+      display: block;
+      font-size: 13.5px;
+      color: var(--white);
+      transition: color .2s ease;
+    }
+
+    .testi-person a:hover b {
+      color: var(--red-500);
+    }
+
+    .testi-person span {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    /* ================= LOCATION ================= */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .location-info h2 {
+      margin-bottom: 18px;
+    }
+
+    .address-block {
+      display: flex;
+      gap: 16px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-m);
+      background: var(--black-850);
+      margin: 26px 0 30px;
+    }
+
+    .address-block svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--red-500);
+      flex-shrink: 0;
+    }
+
+    .address-block p {
+      color: var(--gray-300);
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+
+    .map-box {
+      border-radius: var(--radius-l);
+      overflow: hidden;
+      height: 380px;
+      border: 1px solid var(--line);
+      position: relative;
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .025) 0 1px, transparent 1px 40px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .025) 0 1px, transparent 1px 40px),
+        var(--black-900);
+    }
+
+    .map-box .pin {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .map-box .pin-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      background: linear-gradient(160deg, var(--red-500), var(--red-800));
+      box-shadow: 0 0 24px 4px var(--red-glow);
+    }
+
+    .map-box .pin-ring {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 1px solid rgba(232, 35, 43, .35);
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      animation: ring-pulse 2.5s ease-out infinite;
+    }
+
+    @keyframes ring-pulse {
+      0% {
+        transform: translate(-50%, 0) scale(.4);
+        opacity: .8;
+      }
+
+      100% {
+        transform: translate(-50%, 0) scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    .map-box .map-label {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--gray-500);
+      background: rgba(0, 0, 0, .5);
+      padding: 8px 12px;
+      border-radius: 8px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ================= FINAL CTA ================= */
+    .final-cta {
+      background:
+        radial-gradient(60% 80% at 50% 100%, rgba(232, 35, 43, .28), transparent 70%),
+        var(--black-950);
+      text-align: center;
+      padding: 130px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .final-cta h2 {
+      font-size: clamp(32px, 4.6vw, 50px);
+      margin-bottom: 18px;
+    }
+
+    .final-cta p {
+      color: var(--gray-300);
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+
+    .final-cta .btn-primary {
+      padding: 20px 44px;
+      font-size: 16.5px;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: var(--black-900);
+      border-top: 1px solid var(--line);
+      padding: 64px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      color: var(--gray-500);
+      font-size: 14px;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .2s, background .2s;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--red-500);
+      background: rgba(232, 35, 43, .08);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--gray-300);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      color: var(--gray-300);
+      font-size: 14.5px;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--red-500);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--gray-700);
+      font-family: var(--font-mono);
+    }
+
+    /* ================= WHATSAPP FLOAT ================= */
+    .wa-float {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 150;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(155deg, #22c55e, #16803c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px -6px rgba(34, 197, 94, .55);
+      animation: wa-pulse 2.6s ease-in-out infinite;
+      transition: transform .25s ease;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.08);
+    }
+
+    .wa-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    @keyframes wa-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 10px 30px -6px rgba(34, 197, 94, .55);
+      }
+
+      50% {
+        box-shadow: 0 10px 40px -4px rgba(34, 197, 94, .85);
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width:1080px) {
+
+      .about-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        order: -1;
+      }
+
+      .insta-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width:940px) {
+
+      .nav-links,
+      .nav-cta .btn-ghost {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        height: 420px;
+        order: -1;
+        margin-bottom: 20px;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-item {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:nth-child(odd) {
+        border-right: 1px solid var(--line);
+      }
+
+      .trust-item:nth-child(even) {
+        border-right: none;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:640px) {
+      .section {
+        padding: 76px 0;
+      }
+
+      .hero {
+        padding: 130px 0 70px;
+      }
+
+      .hero-actions .btn {
+        flex: 1 1 auto;
+      }
+
+      .hero-visual {
+        height: 370px;
+        transform: scale(.86);
+        transform-origin: center center;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .flow {
+        gap: 8px;
+      }
+
+      .flow-arrow {
+        transform: rotate(90deg);
+        width: 40px;
+      }
+
+      .flow-step {
+        width: 110px;
+      }
+
+      .flow-circle {
+        width: 68px;
+        height: 68px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .hero-trustline {
+        gap: 14px;
+      }
+
+      .about-visual {
+        height: 280px;
+        padding: 20px;
+      }
+
+      .about-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .map-box {
+        height: 300px;
+      }
+
+      .wa-float {
+        bottom: 18px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (max-width:420px) {
+      .hero-visual {
+        height: 330px;
+        transform: scale(.75);
+        transform-origin: center center;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item:nth-child(odd) {
+        border-right: none;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============== NAVBAR ============== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark"><img src="assets/logo.jpg" alt="Logo Filipe Cell Celulares"></span>
+        Filipe<span>Cell</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#localizacao" class="btn btn-ghost">Ver localização</a>
+        <a href="#" class="btn btn-primary js-wa">Falar no WhatsApp</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre nós</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#contato">Contato</a>
+    <a href="#" class="btn btn-primary js-wa">Falar no WhatsApp</a>
+  </div>
+
+  <main>
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Martinho Campos · MG</span>
+          <h1>Seu próximo <em>celular</em> está aqui.</h1>
+          <p class="lead">Celulares lacrados e seminovos, troca de aparelho e assistência em Martinho Campos e Região.
+          </p>
+          <div class="hero-actions">
+            <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+            <a href="#" class="btn btn-ghost js-wa">Falar no WhatsApp</a>
+          </div>
+          <div class="hero-trustline">
+            <span><b>Lacrados</b> &amp; Seminovos</span>
+            <span class="dot-sep"></span>
+            <span>Aceita <b>seu usado</b> na troca</span>
+            <span class="dot-sep"></span>
+            <span>Loja <b>física</b> em MG</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone phone-left"></div>
+          <div class="phone phone-main">
+            <div class="screen-glow"></div>
+            <div class="screen-status">
+              <span id="screenStatusTime">9:41</span>
+              <span class="signal"><span></span><span></span><span></span><span></span></span>
+            </div>
+            <div class="screen-clock" id="screenClock">9:41</div>
+            <div class="screen-center-brand">
+              <img src="assets/logo.jpg" alt="Logo Filipe Cell" class="screen-brand-logo">
+              <div class="screen-brand-name">Filipe<span>Cell</span></div>
+              <p class="screen-brand-tagline">A melhor loja de celulares, troca e manutenção da região</p>
+            </div>
+          </div>
+          <div class="phone phone-right"></div>
+          <div class="hero-particle" style="width:8px;height:8px;top:12%;left:8%;animation-delay:.2s;"></div>
+          <div class="hero-particle" style="width:5px;height:5px;top:70%;left:14%;animation-delay:1s;"></div>
+          <div class="hero-particle" style="width:6px;height:6px;top:20%;right:6%;animation-delay:1.6s;"></div>
+          <div class="hero-particle" style="width:4px;height:4px;top:78%;right:16%;animation-delay:.7s;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== TRUST BAR ============== -->
+    <section class="trustbar">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <rect x="6" y="2" width="12" height="20" rx="3" />
+            </svg></div>
+          <div>
+            <h3>Aparelhos Lacrados</h3>
+            <p>Celulares novos e lacrados</p>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M17 2l4 4-4 4M3 12v-2a4 4 0 014-4h14M7 22l-4-4 4-4M21 12v2a4 4 0 01-4 4H3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+          <div>
+            <h3>Aceitamos seu usado</h3>
+            <p>Seu aparelho pode entrar na troca</p>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M14.7 6.3a4 4 0 11-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 015.4-5.4z" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+          <div>
+            <h3>Assistência</h3>
+            <p>Suporte para o seu aparelho</p>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M12 22s8-7.2 8-13a8 8 0 10-16 0c0 5.8 8 13 8 13z" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="12" cy="9" r="2.4" />
+            </svg></div>
+          <div>
+            <h3>Loja Física</h3>
+            <p>Martinho Campos - MG</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PRODUTOS ============== -->
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Catálogo</span>
+          <h2 class="h-title">Encontre o celular ideal para você</h2>
+          <p class="lead">Trabalhamos com aparelhos lacrados e seminovos para você escolher o que combina com seu estilo
+            e seu orçamento.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80"
+                alt="iPhone" class="img-iphone" loading="lazy">
+            </div>
+            <h3>iPhone</h3>
+            <p class="cat">Linha Apple</p>
+            <a href="#" class="btn btn-primary js-wa">Tenho interesse</a>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80"
+                alt="Samsung Galaxy" loading="lazy">
+            </div>
+            <h3>Samsung Galaxy</h3>
+            <p class="cat">Linha Galaxy</p>
+            <a href="#" class="btn btn-primary js-wa">Tenho interesse</a>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-thumb">
+              <img src="assets/Motorola%20Moto%20G24.jpg" alt="Motorola Moto G24" loading="lazy">
+            </div>
+            <h3>Motorola</h3>
+            <p class="cat">Linha Moto</p>
+            <a href="#" class="btn btn-primary js-wa">Tenho interesse</a>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80"
+                alt="Acessórios e eletrônicos para celular" loading="lazy">
+            </div>
+            <h3>Outros aparelhos</h3>
+            <p class="cat">Eletrônicos e acessórios</p>
+            <a href="#" class="btn btn-primary js-wa">Tenho interesse</a>
+          </article>
+        </div>
+        <p class="products-note reveal">// Estoque atualizado periodicamente — fale no WhatsApp para conferir os modelos
+          disponíveis no momento.</p>
+      </div>
+    </section>
+
+    <!-- ============== TROCA ============== -->
+    <section class="section tradein">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Troca de aparelho</span>
+          <h2 class="h-title">Seu celular usado pode valer um novo.</h2>
+          <p class="lead">Está pensando em trocar de aparelho? Traga seu celular para avaliação e veja as possibilidades
+            de troca.</p>
+        </div>
+        <div class="flow reveal">
+          <div class="flow-step">
+            <div class="flow-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <rect x="6" y="2" width="12" height="20" rx="3" />
+              </svg></div>
+            <p>Seu celular atual</p>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 12h16m0 0l-6-6m6 6l-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+          <div class="flow-step highlight">
+            <div class="flow-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <path d="M9 11l3 3L22 4M21 12v6a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h11" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <p>Avaliação na loja</p>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 12h16m0 0l-6-6m6 6l-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+          <div class="flow-step">
+            <div class="flow-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <rect x="6" y="2" width="12" height="20" rx="3" />
+                <path d="M12 6l1.5 1.5L12 9l-1.5-1.5L12 6z" />
+              </svg></div>
+            <p>Seu celular novo</p>
+          </div>
+        </div>
+        <div style="text-align:center;" class="reveal">
+          <a href="#" class="btn btn-primary js-wa">Avaliar meu aparelho</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SERVIÇOS ============== -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">O que fazemos</span>
+          <h2 class="h-title">Mais do que uma loja de celulares.</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <rect x="6" y="2" width="12" height="20" rx="3" />
+              </svg></div>
+            <h3>Venda de aparelhos</h3>
+            <p>Aparelhos lacrados e seminovos.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <path d="M17 2l4 4-4 4M3 12v-2a4 4 0 014-4h14M7 22l-4-4 4-4M21 12v2a4 4 0 01-4 4H3"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Troca de aparelhos</h3>
+            <p>Use seu celular atual na negociação.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <path d="M14.7 6.3a4 4 0 11-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 015.4-5.4z" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <h3>Assistência</h3>
+            <p>Conte com suporte para o seu aparelho.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SOBRE ============== -->
+    <section class="section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">Sobre a loja</span>
+          <h2 class="h-title">Filipe Cell Celulares</h2>
+          <p class="lead">Uma loja de celulares em Martinho Campos - MG, oferecendo aparelhos lacrados e
+            seminovos, além de troca de aparelhos e assistência.</p>
+          <div class="about-stats">
+            <div><b>Lacrados</b><span>e seminovos</span></div>
+            <div><b>Troca</b><span>de aparelhos</span></div>
+            <div><b>Assistência</b><span>especializada</span></div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <img src="assets/interiorloja.webp" alt="Interior da Loja Filipe Cell Celulares" class="about-bg"
+            loading="lazy">
+          <div class="store-row"><span class="tag">FILIPE CELL</span><span class="dot"></span></div>
+          <span class="tag">Martinho Campos — MG</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== INSTAGRAM ============== -->
+    <section class="section instagram">
+      <div class="container">
+        <div class="insta-head reveal">
+          <div>
+            <span class="eyebrow">Redes sociais</span>
+            <h2 class="h-title">Siga a Filipe Cell</h2>
+            <p class="lead" style="margin-top:10px;">Acompanhe novidades, aparelhos disponíveis, avaliações de clientes
+              e muito mais.</p>
+            <div class="insta-handle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" />
+              </svg>
+              @filipecell_celulares_
+            </div>
+          </div>
+          <a href="https://www.instagram.com/filipecell_celulares_" target="_blank" rel="noopener"
+            class="btn btn-primary">Ver Instagram</a>
+        </div>
+        <div class="insta-grid reveal">
+          <a class="insta-cell" href="https://www.instagram.com/reel/Db-v2icxVTU/" target="_blank" rel="noopener"
+            aria-label="Ver reel 1 no Instagram">
+            <video src="assets/reels1.mp4" autoplay muted loop playsinline preload="metadata"
+              class="insta-video"></video>
+            <div class="insta-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polygon points="8,5 19,12 8,19" />
+              </svg>
+            </div>
+          </a>
+          <a class="insta-cell" href="https://www.instagram.com/reel/Db5zgrrRO1L/" target="_blank" rel="noopener"
+            aria-label="Ver reel 2 no Instagram">
+            <video src="assets/reels2.mp4" autoplay muted loop playsinline preload="metadata"
+              class="insta-video"></video>
+            <div class="insta-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polygon points="8,5 19,12 8,19" />
+              </svg>
+            </div>
+          </a>
+          <a class="insta-cell"
+            href="https://www.instagram.com/reel/Daxo3Ozxp66/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+            target="_blank" rel="noopener" aria-label="Ver reel 3 no Instagram">
+            <video src="assets/reels3.mp4" autoplay muted loop playsinline preload="metadata"
+              class="insta-video"></video>
+            <div class="insta-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polygon points="8,5 19,12 8,19" />
+              </svg>
+            </div>
+          </a>
+          <a class="insta-cell"
+            href="https://www.instagram.com/reel/DagAI14Rk4B/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+            target="_blank" rel="noopener" aria-label="Ver reel 4 no Instagram">
+            <video src="assets/reels4.mp4" autoplay muted loop playsinline preload="metadata"
+              class="insta-video"></video>
+            <div class="insta-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polygon points="8,5 19,12 8,19" />
+              </svg>
+            </div>
+          </a>
+          <a class="insta-cell"
+            href="https://www.instagram.com/reel/Da0wjwdJuSv/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+            target="_blank" rel="noopener" aria-label="Ver reel 5 no Instagram">
+            <video src="assets/reels5.mp4" autoplay muted loop playsinline preload="metadata"
+              class="insta-video"></video>
+            <div class="insta-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <polygon points="8,5 19,12 8,19" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <p class="products-note reveal">// Toque em qualquer miniatura para assistir ao reel direto no Instagram.</p>
+      </div>
+    </section>
+
+    <!-- ============== DEPOIMENTOS ============== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Avaliações</span>
+          <h2 class="h-title">Quem compra, recomenda.</h2>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="quote">"Não tenho nada que reclamar do atendimento é muito bom a gente sente até mais vontade de
+              comprar na loja vocês estão de parabéns pelo atendimento continue assim que vocês vão longe"</p>
+            <div class="testi-person">
+              <div class="testi-avatar">A</div>
+              <div>
+                <a href="https://www.google.com/maps/contrib/115105707594569402668/reviews?hl=pt-BR" target="_blank"
+                  rel="noopener">
+                  <b>Anna</b>
+                </a>
+                <span>Avaliação no Google</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="quote">"Loja maravilhosa, atendimento nem se fala, comprei um telefone lá e amei, nunca tive
+              problemas."</p>
+            <div class="testi-person">
+              <div class="testi-avatar">I</div>
+              <div>
+                <a href="https://www.google.com/maps/contrib/113282598121871968140/reviews?hl=pt-BR" target="_blank"
+                  rel="noopener">
+                  <b>Iara Figueiredo</b>
+                </a>
+                <span>Avaliação no Google</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p class="quote">"Excelente atendimento. Melhor assistência. Ótimos aparelhos 🤝"</p>
+            <div class="testi-person">
+              <div class="testi-avatar">A</div>
+              <div>
+                <a href="https://www.google.com/maps/contrib/104197484630171663221/reviews?hl=pt-BR" target="_blank"
+                  rel="noopener">
+                  <b>Alex Paulo</b>
+                </a>
+                <span>Avaliação no Google</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== LOCALIZAÇÃO ============== -->
+    <section class="section" id="localizacao">
+      <div class="container location-grid">
+        <div class="location-info reveal">
+          <span class="eyebrow">Onde estamos</span>
+          <h2>Venha nos visitar</h2>
+          <div class="address-block">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+              <path d="M12 22s8-7.2 8-13a8 8 0 10-16 0c0 5.8 8 13 8 13z" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="12" cy="9" r="2.4" />
+            </svg>
+            <p>Rua Professor Coutinho, 151<br>Martinho Campos - MG<br>CEP: 35606-000</p>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Professor+Coutinho%2C+151%2C+Martinho+Campos%2C+MG%2C+35606-000"
+            target="_blank" rel="noopener" class="btn btn-primary">Como chegar</a>
+        </div>
+        <div class="map-box reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Rua+Professor+Coutinho,+151,+Martinho+Campos,+MG,+35606-000&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Localização da Filipe Cell Celulares no mapa" allowfullscreen
+            style="width:100%;height:100%;border:0;">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CTA FINAL ============== -->
+    <section class="final-cta" id="contato">
+      <div class="container reveal">
+        <span class="eyebrow" style="justify-content:center;">Fale com a gente</span>
+        <h2>Está procurando um celular novo?</h2>
+        <p>Fale com a Filipe Cell e encontre o aparelho ideal para você.</p>
+        <a href="#" class="btn btn-primary js-wa">Falar com a Filipe Cell</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-mark"><img src="assets/logo.jpg" alt="Logo Filipe Cell Celulares"></span>
+            Filipe<span>Cell</span>
+          </a>
+          <p>Martinho Campos - MG<br>Rua Professor Coutinho, 151</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/filipecell_celulares_" target="_blank" rel="noopener"
+              aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" />
+              </svg></a>
+            <a href="#" class="js-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+                <path d="M21 11.5a8.5 8.5 0 01-12.5 7.5L3 20l1.1-5.3A8.5 8.5 0 1121 11.5z" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="#" class="js-wa">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/filipecell_celulares_" target="_blank" rel="noopener">Instagram</a>
+            </li>
+            <li><a href="#localizacao">Localização</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Filipe Cell Celulares. Todos os direitos reservados.</span>
+        <span>Martinho Campos — MG</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== WHATSAPP FLUTUANTE ============== -->
+  <a href="#" class="wa-float js-wa" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.3 1.2-1.8 1.28-.46.07-1.05.1-1.7-.1-.39-.13-.9-.3-1.54-.58-2.72-1.18-4.5-3.93-4.63-4.11-.14-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.25-.27.54-.34.72-.34h.5c.16 0 .38-.03.58.44.22.53.75 1.83.82 1.96.07.14.11.3.02.48-.09.18-.14.29-.27.45-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.2.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.65-.15 1.27z" />
+    </svg>
+  </a>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // ============================================================
+      // CONFIGURAÇÃO — edite aqui quando tiver o número da loja
+      // Formato: código do país + DDD + número, apenas dígitos
+      // Exemplo: "5537999999999"
+      // ============================================================
+      const WHATSAPP_NUMBER = "5537981911593";
+      const WHATSAPP_MESSAGE = "Olá! Vi o site da Filipe Cell e gostaria de mais informações.";
+
+      function buildWhatsAppLink() {
+        const number = WHATSAPP_NUMBER.replace(/\D/g, "");
+        const text = encodeURIComponent(WHATSAPP_MESSAGE);
+        if (!number) { return "#"; }
+        return `https://wa.me/${number}?text=${text}`;
+      }
+
+      document.querySelectorAll(".js-wa").forEach(el => {
+        el.setAttribute("href", buildWhatsAppLink());
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener");
+        el.addEventListener("click", function (e) {
+          if (WHATSAPP_NUMBER.includes("INSIRA")) {
+            e.preventDefault();
+            console.warn("Configure o WHATSAPP_NUMBER no script para ativar o botão.");
+          }
+        });
+      });
+
+      // Navbar on scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 20);
+      });
+
+      // Mobile menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.classList.toggle("open", isOpen);
+        hamburger.setAttribute("aria-expanded", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+      mobileMenu.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          hamburger.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Relógio da tela do celular no Hero — mostra a hora real, ao vivo
+      function updatePhoneClock() {
+        const now = new Date();
+        const time = now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+        const statusEl = document.getElementById("screenStatusTime");
+        const clockEl = document.getElementById("screenClock");
+        if (statusEl) statusEl.textContent = time;
+        if (clockEl) clockEl.textContent = time;
+      }
+      updatePhoneClock();
+      setInterval(updatePhoneClock, 1000);
+
+      // Scroll reveal
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(el => io.observe(el));
+
+    })();
+  </script>
+</body>
+
+</html>
