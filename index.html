@@ -337,42 +337,68 @@
     .hamburger {
       display: none;
       flex-direction: column;
-      gap: 5px;
-      padding: 8px;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 6px;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid var(--line);
       z-index: 210;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .hamburger:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: var(--gray-500);
     }
 
     .hamburger span {
-      width: 24px;
-      height: 2px;
+      width: 4.5px;
+      height: 4.5px;
+      border-radius: 50%;
       background: var(--white);
-      transition: transform .3s ease, opacity .3s ease;
+      transition: transform .3s cubic-bezier(.4, 0, .2, 1), opacity .25s ease, width .3s ease, height .3s ease, border-radius .3s ease, background .25s ease;
     }
 
     .hamburger.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
+      transform: translateY(6px) rotate(45deg);
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--red-500);
     }
 
     .hamburger.open span:nth-child(2) {
       opacity: 0;
+      transform: scale(0);
     }
 
     .hamburger.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
+      transform: translateY(-6px) rotate(-45deg);
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--red-500);
     }
 
     .mobile-menu {
       position: fixed;
       inset: 0;
-      background: var(--black-950);
+      background: rgba(8, 8, 10, .98);
+      backdrop-filter: blur(20px);
       z-index: 195;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 28px;
-      padding: 32px;
+      justify-content: flex-start;
+      gap: 18px;
+      padding: 105px 28px 40px;
       transform: translateY(-100%);
       transition: transform .35s cubic-bezier(.65, 0, .35, 1);
+      overflow-y: auto;
     }
 
     .mobile-menu.open {
@@ -381,13 +407,23 @@
 
     .mobile-menu a {
       font-family: var(--font-display);
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 600;
+      color: var(--white);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+      transition: color .2s ease, padding-left .2s ease;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--red-500);
+      padding-left: 6px;
     }
 
     .mobile-menu .btn {
-      margin-top: 20px;
-      width: fit-content;
+      margin-top: 15px;
+      width: 100%;
+      border-bottom: none;
     }
 
     /* ================= HERO ================= */
@@ -1541,7 +1577,7 @@
     @media (max-width:940px) {
 
       .nav-links,
-      .nav-cta .btn-ghost {
+      .nav-cta {
         display: none;
       }
 
@@ -1620,22 +1656,68 @@
         gap: 12px;
       }
 
-      .flow {
-        gap: 8px;
+      .insta-grid .insta-cell:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 6px);
+        margin: 0 auto;
       }
 
-      .flow-arrow {
-        transform: rotate(90deg);
-        width: 40px;
+      .flow {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 36px 0 32px;
       }
 
       .flow-step {
-        width: 110px;
+        width: 100%;
+        max-width: 250px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+        background: rgba(255, 255, 255, .03);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-m);
+        padding: 12px 18px;
+        text-align: left;
+      }
+
+      .flow-step.highlight {
+        background: linear-gradient(135deg, rgba(232, 35, 43, .16), rgba(232, 35, 43, .04));
+        border-color: var(--red-500);
+        box-shadow: 0 4px 20px -4px var(--red-glow);
       }
 
       .flow-circle {
-        width: 68px;
-        height: 68px;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+      }
+
+      .flow-circle svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .flow-step p {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+      }
+
+      .flow-arrow {
+        transform: none;
+        width: 24px;
+        height: 20px;
+        color: var(--red-500);
+        margin: -2px 0;
+      }
+
+      .flow-arrow svg {
+        width: 18px;
+        height: 18px;
+        transform: rotate(90deg);
       }
 
       .footer-grid {
@@ -1746,7 +1828,7 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Martinho Campos · MG</span>
+          <span class="eyebrow">Martinho Campos e Região · MG</span>
           <h1>Seu próximo <em>celular</em> está aqui.</h1>
           <p class="lead">Celulares lacrados e seminovos, troca de aparelho e assistência em Martinho Campos e Região.
           </p>
